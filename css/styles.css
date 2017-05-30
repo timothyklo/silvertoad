@@ -1,18 +1,15 @@
 * {
-
-	font-family: "Open Sans";
-	box-sizing: border-box;
-	border: 1px solid red;
+	font-family: 'Open Sans', sans-serif;
 }
 
-.container {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;  
-	webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
+a {
+	text-decoration: none;
+}
+
+nav a {
+	font-weight: 600; /*semibold*/
+	font-size: 18px;
+	color: #666666;
 }
 
 [class*="col-"] {
@@ -20,6 +17,7 @@
 	width: 100%;
 }
 
+/*makes responsive*/
 @media only screen and (min-width: 768px) {
 	.col-1 {
 		width: 33.33%;
@@ -34,10 +32,42 @@
 	}
 }
 
-.row::after {
-	content: "";
-	clear: both;
-	display: table;
+.container {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;  
+	webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+/*title one*/
+.container h3 {
+	font-weight: light;
+	font-size: 30px;
+	color: #333333;
+}
+
+/*title one paragraph*/
+.container p {
+	font-weight: regular;
+	font-size: 18px;
+	color: #666666;
+}
+
+/*title two*/
+#subsection h5 {
+	font-weight: bold;
+	font-size: 16px;
+	color: #333333;
+}
+
+/*title two paragraph*/
+#subsection p {
+	font-weight: regular;
+	font-size: 16px;
+	color: #666666;
 }
 
 img {
@@ -45,6 +75,32 @@ img {
 	height: auto;
 }
 
-ul {
+#section3 ul {
 	list-style-image: url('../img/checkmark.svg');
+}
+
+footer a {
+	font-weight: bold;
+	font-size: 18px;
+	color: #DDDDDD;
+	letter-spacing: 2px;
+}
+
+nav {
+	background-color: #F5F6F8;
+}
+
+footer {
+	background-color: #3A3D40;
+}
+
+/*section dividers*/
+hr {
+	display: block;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: auto;
+	margin-right: auto;
+	border-width: 1px;
+	border-color: #D8D8D8;
 }
