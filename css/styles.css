@@ -17,7 +17,7 @@ nav a {
 	width: 100%;
 }
 
-/*makes responsive*/
+/*for large screens*/
 @media only screen and (min-width: 768px) {
 	.col-1 {
 		width: 33.33%;
@@ -30,6 +30,11 @@ nav a {
 	.col-3 {
 		width: 100%;
 	}
+}
+
+/*for small screens*/
+@media only screen and (max-width: 768px) {
+
 }
 
 .container {
@@ -50,7 +55,7 @@ nav a {
 }
 
 /*title one paragraph*/
-.container p {
+.container * {
 	font-weight: regular;
 	font-size: 18px;
 	color: #666666;
