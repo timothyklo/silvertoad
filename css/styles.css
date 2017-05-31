@@ -2,14 +2,32 @@
 	font-family: 'Open Sans', sans-serif;
 }
 
-a {
-	text-decoration: none;
+/*for testing only! change percentages back when turning off*/
+div {
+	border: 1px solid yellow;
 }
 
+nav {
+	background-color: #F5F6F8;
+	padding: 20px;
+}
+nav li {
+	list-style: none;
+	float: left;
+	padding: 5px;
+}
 nav a {
 	font-weight: 600; /*semibold*/
 	font-size: 18px;
 	color: #666666;
+	text-decoration: none;
+}
+button {
+	color: white;
+	background-color: orange;
+	border: none;
+	padding: 10px 17px;
+	border-radius: 2px;
 }
 
 [class*="col-"] {
@@ -19,24 +37,69 @@ nav a {
 
 /*for large screens*/
 @media only screen and (min-width: 768px) {
-	.col-1 {
-		width: 33.33%;
+	.large-col-1 {
+		width: 16%;
+	}
+	.large-col-2 {
+		width: 33%;
 		order: 2;
 	}
-	.col-2 {
-		width: 66.66%;
+	.large-col-3 {
+		width: 50%;
+	}
+	.large-col-4 {
+		width: 66%;
 		order: 1;
 	}
-	.col-3 {
+	.large-col-5 {
+		width: 83%;
+	}
+	.large-col-6 {
 		width: 100%;
 	}
 }
 
 /*for small screens*/
 @media only screen and (max-width: 768px) {
-
+	.small-col-1 {
+		width: 16%;
+		float: left;
+	}
+	.small-col-2 {
+		width: 33%;
+		order: 2;
+	}
+	.small-col-3 {
+		width: 50%;
+	}
+	.small-col-4 {
+		width: 66%;
+		order: 1;
+	}
+	.small-col-5 {
+		width: 82%;
+		float: right;
+	}
+	.small-col-6 {
+		width: 100%;
+		text-align: center;
+	}
 }
 
+/*drop nav button (try it free) on small screens*/
+@media (max-width: 768px) {
+	.trial {
+		display: none;
+	}
+}
+
+/*spread footer on large screens*/
+@media only screen and (min-width: 768px) {
+	footer li {
+		float: left;
+		padding: 20px;
+	}
+}
 .container {
 	display: -webkit-box;
 	display: -moz-box;
@@ -84,19 +147,24 @@ img {
 	list-style-image: url('../img/checkmark.svg');
 }
 
+footer {
+	background-color: #3A3D40;
+	padding: 60px;
+	display: flex;
+}
 footer a {
 	font-weight: bold;
 	font-size: 18px;
 	color: #DDDDDD;
 	letter-spacing: 2px;
+	text-decoration: none;
 }
-
-nav {
-	background-color: #F5F6F8;
+footer li {
+	list-style: none;
+	padding: 10px;
 }
-
-footer {
-	background-color: #3A3D40;
+footer li img {
+	padding-bottom: 1px;
 }
 
 /*section dividers*/
@@ -108,4 +176,9 @@ hr {
 	margin-right: auto;
 	border-width: 1px;
 	border-color: #D8D8D8;
+}
+
+/*padding for main section*/
+#maincontent {
+	padding: 30px 60px;
 }
