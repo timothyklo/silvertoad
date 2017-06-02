@@ -1,23 +1,26 @@
 * {
 	font-family: 'Open Sans', sans-serif;
-}
-
-/*for testing only! change percentages back when turning off*/
-div {
-	border: 1px solid yellow;
+	line-height: 1.7;
+	margin: 0;
+	/*box-shadow:inset 0px 0px 0px 1px red;*/
 }
 
 nav {
 	background-color: #F5F6F8;
-	padding: 20px;
+}
+#logo {
+	padding: 20px 0px;
+}
+#menu ul {
+	margin: auto;
 }
 nav li {
 	list-style: none;
 	float: left;
-	padding: 5px;
+	padding: 10px 24px;
 }
 nav a {
-	font-weight: 600; /*semibold*/
+	font-weight: 500; /* (semibold) */
 	font-size: 18px;
 	color: #666666;
 	text-decoration: none;
@@ -26,92 +29,119 @@ button {
 	color: white;
 	background-color: orange;
 	border: none;
-	padding: 10px 17px;
+	padding: 8px 20px;
 	border-radius: 2px;
+}
+
+.topicpic {
+	height: 13em;
+	width: 13em;
 }
 
 [class*="col-"] {
 	float: left;
-	width: 100%;
+	width: 100%
 }
 
 /*for large screens*/
 @media only screen and (min-width: 768px) {
+	nav {
+		padding: 10px 60px;
+	}
 	.large-col-1 {
-		width: 16%;
+		width: 16.67%;
 	}
 	.large-col-2 {
-		width: 33%;
+		width: 33.33%;
 		order: 2;
 	}
 	.large-col-3 {
 		width: 50%;
 	}
 	.large-col-4 {
-		width: 66%;
+		width: 66.67%;
 		order: 1;
 	}
 	.large-col-5 {
-		width: 83%;
+		width: 83.33%;
 	}
 	.large-col-6 {
 		width: 100%;
+	}
+	nav {
+		padding: 5px 60px;
+	}
+	.trial {
+		padding: 15px 0px 15px 60px;
+	}
+	.topicpic {
+		padding: 3px 0px 0px 10px;
+	}
+	#maincontent {
+		margin-bottom: 450px;
+	}
+	footer li {
+		float: left;
 	}
 }
 
 /*for small screens*/
 @media only screen and (max-width: 768px) {
 	.small-col-1 {
-		width: 16%;
+		width: 16.67%;
 		float: left;
 	}
 	.small-col-2 {
-		width: 33%;
+		width: 33.33%;
 		order: 2;
 	}
 	.small-col-3 {
 		width: 50%;
 	}
 	.small-col-4 {
-		width: 66%;
+		width: 66.67%;
 		order: 1;
 	}
 	.small-col-5 {
-		width: 82%;
+		width: 83.33%;
 		float: right;
 	}
 	.small-col-6 {
 		width: 100%;
 		text-align: center;
 	}
-}
-
-/*drop nav button (try it free) on small screens*/
-@media (max-width: 768px) {
+	.container li {
+		list-style-position: inside;
+	}
+	nav {
+		padding: 20px 0px;
+	}
+	#menu ul {
+		width: 80%;
+	}
 	.trial {
 		display: none;
 	}
-}
-
-/*spread footer on large screens*/
-@media only screen and (min-width: 768px) {
-	footer li {
-		float: left;
-		padding: 20px;
+	div {
+		padding: 10px;
+	}
+	#subsection .small-col-5 {
+		text-align: left;
+	}
+	footer ul {
+		margin: auto;
+		width: 45%;
 	}
 }
+
 .container {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;  
-	webkit-flex-flow: row wrap;
+	display: flex; 
 	flex-flow: row wrap;
+	padding: 40px 0px 0px 0px;
 }
 
 /*title one*/
-.container h3 {
+.container div span {
 	font-weight: light;
 	font-size: 30px;
 	color: #333333;
@@ -124,11 +154,18 @@ button {
 	color: #666666;
 }
 
+#subsection div {
+	padding: 5px 0px;
+}
+#subsection div span, p {
+	padding: 0px 10px 0px 0px;
+}
 /*title two*/
-#subsection h5 {
+#subsection span {
 	font-weight: bold;
 	font-size: 16px;
 	color: #333333;
+	text-align: left;
 }
 
 /*title two paragraph*/
@@ -136,6 +173,7 @@ button {
 	font-weight: regular;
 	font-size: 16px;
 	color: #666666;
+	text-align: left;
 }
 
 img {
@@ -143,13 +181,19 @@ img {
 	height: auto;
 }
 
+.listings {
+	padding: 10px 50px;
+}
+.listings li {
+	padding: 5px 0px;
+}
 #section3 ul {
 	list-style-image: url('../img/checkmark.svg');
 }
 
 footer {
 	background-color: #3A3D40;
-	padding: 60px;
+	padding: 50px;
 	display: flex;
 }
 footer a {
@@ -164,21 +208,24 @@ footer li {
 	padding: 10px;
 }
 footer li img {
-	padding-bottom: 1px;
+	margin: -5px 4px;
 }
 
 /*section dividers*/
 hr {
 	display: block;
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	margin-left: auto;
 	margin-right: auto;
 	border-width: 1px;
+	border-top-width: 0px;
 	border-color: #D8D8D8;
+	border-right-color: white;
+	border-left-width: 0px;
 }
 
 /*padding for main section*/
 #maincontent {
-	padding: 30px 60px;
+	padding: 0px 80px;
 }
